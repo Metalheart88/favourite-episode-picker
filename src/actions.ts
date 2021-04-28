@@ -1,6 +1,6 @@
-import { IAction, IEpisode, IState } from './types'
+import { Dispatch, IAction, IEpisode, IState } from './types'
 
-export const fetchDataAction = async (dispatch: any): Promise<IAction> => {
+export const fetchDataAction = async (dispatch: Dispatch): Promise<void> => {
   const URL =
     'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes'
   const data = await fetch(URL)

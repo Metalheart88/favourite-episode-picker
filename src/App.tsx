@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@reach/router'
 import { Store } from './Store'
 
-const App = (props: any): JSX.Element => {
+const App = ({ children }: any): JSX.Element => {
   const { state } = React.useContext(Store)
 
   return (
@@ -17,7 +17,7 @@ const App = (props: any): JSX.Element => {
           <Link to='/favourites'>{`Favourite Episodes: ${state.favourites.length}`}</Link>
         </div>
       </header>
-      {props.children}
+      {children}
     </>
   )
 }
